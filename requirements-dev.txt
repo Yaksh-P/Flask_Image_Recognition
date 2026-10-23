@@ -1,0 +1,7 @@
+-r requirements.txt
+# Flask 2.2 imports url_quote, removed in Werkzeug 3.
+Werkzeug==2.2.3
+# Preserve TensorFlow 2.10's supported protobuf API.
+protobuf==3.19.6
+pylint==3.3.8
+pre-commit==4.2.0

@@ -1,0 +1,52 @@
+2026-10-23 18:26:20.256998: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'cudart64_110.dll'; dlerror: cudart64_110.dll not found
+2026-10-23 18:26:20.257126: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2026-10-23 18:26:36.998722: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'nvcuda.dll'; dlerror: nvcuda.dll not found
+2026-10-23 18:26:36.998803: W tensorflow/stream_executor/cuda/cuda_driver.cc:263] failed call to cuInit: UNKNOWN ERROR (303)
+2026-10-23 18:26:37.022555: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: Yaksh-Lap
+2026-10-23 18:26:37.023037: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: Yaksh-Lap
+2026-10-23 18:26:37.023736: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Home: 200
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 2s 2s/step
+Prediction HTTP: 200
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="/static/css/custom.css" rel="stylesheet"/>
+
+    <title>
+        
+Prediction - Hand Sign Digit Recognition
+
+    </title>
+  </head>
+<body>
+
+<div class="container py-5">
+
+    <header class="text-white text-center">
+        <h1 class="display-4">Hand Sign Digit Language Detection</h1>
+        <p class="lead mb-5">You will see the prediction of the input image.</p>
+    </header>
+
+    <header class="text-white text-center">
+        <h1 class="display-5">Prediction</h1>
+        
+        <h2 class="display-4 text-dark font-weight-bold">4</h2>
+        
+    </header>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="/static/js/image_upload.js"></script>
+  </body>
+</html>

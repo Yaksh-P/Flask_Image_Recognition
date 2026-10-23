@@ -1,0 +1,12 @@
+.venv/
+.python310/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.idea/
+tmp/
+.cache/
+output/
+evidence/*.png
+evidence/*.log
+evidence/*-response.html
