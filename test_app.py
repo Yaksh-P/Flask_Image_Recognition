@@ -74,3 +74,27 @@ def test_preprocessing():
     assert processed.max() <= 1
     assert processed[0, 0, 0, 0] == 1.0
     assert processed[0, 0, 0, 2] == 0.0
+
+def test_grayscale_upload(client, monkeypatch):
+    """A valid grayscale image is converted to RGB for prediction."""
+    image_file = BytesIO()
+    Image.new("L", (80, 60), color=128).save(
+        image_file, format="PNG"
+    )
+    image_file.seek(0)
+
+    def fake_predict(image):
+        assert image.shape == (1, 224, 224, 3)
+        return 4
+
+    monkeypatch.setattr("app.predict_result", fake_predict)
+
+    response = client.post(
+        "/prediction",
+        data={"file": (image_file, "grayscale.png")},
+        content_type="multipart/form-data",
+    )
+
+    assert response.status_code == 200
+    assert b">4</h2>" in response.data
+    assert b"File cannot be processed." not in response.data
