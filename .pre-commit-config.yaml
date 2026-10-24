@@ -13,4 +13,4 @@ repos:
         entry: python -m pylint
         language: system
         types: [python]
-        files: ^(app|model)\.py$
+        files: ^(app|model|test_app)\.py$
